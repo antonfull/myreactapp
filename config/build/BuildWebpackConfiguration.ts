@@ -10,18 +10,18 @@ export function BuildWebpackConfiguration(options: buildOptions): webpack.Config
     const {mode, paths, isDev} = options;
     return {
         mode,
-            entry: paths.entry,
+        entry: paths.entry,
         output: {
-        filename: "[name].[contenthash].js", //здесь указываем, как будет называться главный файл после бандлa
+            filename: "[name].[contenthash].js", //здесь указываем, как будет называться главный файл после бандлa
             path: paths.output,
             clean: true,
-    },
+        },
         plugins: buildPlugins(options),
-            module: {
-        rules: buildLoaders(options),
-    },
-        resolve: buildReslovers(),
-        devtool: isDev ? 'inline-source-map' : false,
+        module: {
+            rules: buildLoaders(options),
+        },
+        resolve: buildReslovers(options),
+        devtool: isDev ? "inline-source-map" : false,
         devServer: isDev ? buildDevServer(options) : undefined
-    }
+    };
 }
