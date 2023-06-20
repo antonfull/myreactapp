@@ -1,5 +1,5 @@
-import React from "react";
-import {useTranslation} from "react-i18next";
+import React from 'react';
+import {useTranslation} from 'react-i18next';
 
 const AboutPage = () => {
 
@@ -8,7 +8,7 @@ const AboutPage = () => {
 
     return (
         <div>
-            {t("О нас")}
+            {t('О нас')}
         </div>
     );
 };
