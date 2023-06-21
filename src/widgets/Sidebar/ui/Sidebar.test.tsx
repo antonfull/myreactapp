@@ -1,6 +1,8 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import Sidebar from './Sidebar';
-import {renderWithTranslation} from 'shared/lib/test/TestWithTranslation/RenderWithTranslation';
+import {renderWithTranslation} from "../../../shared/lib/test/TestWithTranslation/RenderWithTranslation";
+
+
 
 
 
